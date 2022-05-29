@@ -1,0 +1,105 @@
+:root {
+  --primary-blue: #97c8d8;
+  --primary-teal: #05384a;
+  --light-biege: #f7efe8;
+  --light-blue: #c7e8f6;
+
+  --hero-height: 600px;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main styling */
+html,
+body {
+  font-family: "Heebo", sans-serif;
+  color: var(--primary-teal);
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 250;
+}
+
+/* Utilities */
+.container {
+  padding: 0px 25px;
+  height: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  z-index: 1;
+}
+.btn-light {
+  color: var(--primary-teal);
+  background-color: var(--light-blue);
+  transition: all 250ms ease-in-out;
+}
+
+.btn-light:hover {
+  color: var(--primary-teal);
+  transition: all 250ms ease-in-out;
+}
+
+.btn-dark {
+  color: var(--light-blue);
+  background-color: var(--primary-teal);
+  transition: all 250ms ease-in-out;
+}
+
+.btn-dark:hover {
+  color: var(--light-blue);
+  transition: all 250ms ease-in-out;
+}
+
+a .overlay-dark {
+  position: absolute;
+  width: 0px;
+  height: 48px;
+  margin: -34px -20px;
+  background-color: var(--primary-teal);
+  transition: all 250ms ease-in-out;
+  z-index: -1;
+}
+a:hover .overlay-dark {
+  width: 123px;
+  background-color: var(--primary-teal);
+  transition: all 250ms ease-in-out;
+  z-index: -1;
+}
+
+a .overlay-light {
+  position: absolute;
+  width: 0px;
+  height: 43px;
+  margin: -33px -20px;
+  background-color: var(--light-blue);
+  transition: all 250ms ease-in-out;
+}
+a:hover .overlay-light {
+  width: 123px;
+  background-color: var(--light-blue);
+  transition: all 250ms ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 20px;
+}
