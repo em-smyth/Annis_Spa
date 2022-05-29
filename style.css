@@ -210,20 +210,6 @@ h2 {
   transition: all 250ms ease-in-out;
 }
 
-#navbar .navbar-flex li a .overlay-light {
-  position: absolute;
-  width: 0px;
-  height: 43px;
-  margin: -33px -20px;
-  background-color: var(--light-blue);
-  transition: all 250ms ease-in-out;
-}
-#navbar .navbar-flex li a:hover .overlay-light {
-  width: 122px;
-  background-color: var(--light-blue);
-  transition: all 250ms ease-in-out;
-}
-
 /* Intro section */
 
 #section-intro {
