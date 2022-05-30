@@ -52,7 +52,7 @@ a {
 }
 
 .btn-light:hover {
-  color: var(--primary-teal);
+  color: var(--light-blue);
   transition: all 250ms ease-in-out;
 }
 
@@ -91,10 +91,12 @@ a .overlay-light {
   background-color: var(--light-blue);
   transition: all 250ms ease-in-out;
 }
-li a:hover .overlay-light {
-  width: 122px;
+
+a:hover .overlay-light {
+  width: 123px;
   background-color: var(--light-blue);
   transition: all 250ms ease-in-out;
+  z-index: -1;
 }
 
 h2 {
