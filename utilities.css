@@ -45,6 +45,13 @@ a {
   padding: 10px 20px;
   z-index: 1;
 }
+
+.btn-flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 .btn-text {
   z-index: 1;
 }
@@ -55,7 +62,7 @@ a {
 }
 
 .btn-light:hover {
-  color: red;
+  color: var(--light-blue);
   transition: all 250ms ease-in-out;
 }
 
@@ -66,7 +73,7 @@ a {
 }
 
 .btn-dark:hover {
-  color: red;
+  color: var(--primary-teal);
   transition: all 250ms ease-in-out;
 }
 
