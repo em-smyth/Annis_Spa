@@ -45,6 +45,9 @@ a {
   padding: 10px 20px;
   z-index: 1;
 }
+.btn-text {
+  z-index: 1;
+}
 .btn-light {
   color: var(--primary-teal);
   background-color: var(--light-blue);
@@ -52,7 +55,7 @@ a {
 }
 
 .btn-light:hover {
-  color: var(--light-blue);
+  color: red;
   transition: all 250ms ease-in-out;
 }
 
@@ -63,7 +66,7 @@ a {
 }
 
 .btn-dark:hover {
-  color: var(--light-blue);
+  color: red;
   transition: all 250ms ease-in-out;
 }
 
@@ -78,6 +81,7 @@ a .overlay-dark {
 }
 a:hover .overlay-dark {
   width: 123px;
+  height: 48px;
   background-color: var(--primary-teal);
   transition: all 250ms ease-in-out;
   z-index: -1;
@@ -90,6 +94,7 @@ a .overlay-light {
   margin: -33px -20px;
   background-color: var(--light-blue);
   transition: all 250ms ease-in-out;
+  z-index: -1;
 }
 
 a:hover .overlay-light {

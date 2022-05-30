@@ -30,13 +30,9 @@ h2 {
   flex-direction: column;
 }
 
-#header .hero-text a {
-  z-index: 1;
-}
-
 #header .hero-text h1 {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   font-weight: 300;
   color: #fff;
   font-size: 4rem;
@@ -101,7 +97,6 @@ h2 {
   color: var(--light-blue);
   font-weight: 250;
   text-transform: uppercase;
-  z-index: 1;
 }
 
 #navbar .navbar-flex li a:hover {
@@ -133,7 +128,6 @@ h2 {
 
 #section-intro {
   background: url("./img/flowers.jpg") no-repeat center/cover;
-  /* opacity: 0.7; */
   text-align: center;
   height: 500px;
 }
@@ -148,9 +142,9 @@ h2 {
   padding: 20px 20px 140px 20px;
 }
 
-#section-intro a {
+/* #section-intro a {
   z-index: 1;
-}
+} */
 
 /* Section Offer */
 
