@@ -27,12 +27,14 @@
   color: #fff;
   font-size: 4rem;
   padding: 0 0 30px 0;
+  text-shadow: 0px 0px 10px black;
 }
 
 #header .hero-text h2 {
   color: #fff;
   font-weight: 200;
   padding: 30px 0 20px 0;
+  text-shadow: 0px 0px 10px black;
 }
 
 /* Navbar */
@@ -134,7 +136,7 @@
 /* Section: Treatments */
 
 #section-treatments {
-  background-color: var(--light-blue);
+  background-color: var(--light-biege);
   /* margin: 50px 0; */
 }
 
@@ -143,7 +145,7 @@
 }
 #section-treatments .flex-treatments {
   display: flex;
-  margin-top: 40px;
+  margin: 40px 0 80px 0;
   flex-direction: row;
   justify-content: space-around;
   height: 300px;
@@ -186,26 +188,34 @@
   align-items: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -30%);
 }
 
 #section-treatments .flex-treatments .offer-container .flex-overlay-content h3 {
-  padding: 40px;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 0px 0px 10px black;
+  cursor: pointer;
+}
+
+#section-treatments .flex-treatments .offer-container .flex-overlay-content i {
+  text-shadow: 0px 0px 10px black;
 }
 
 .bottom-line {
   height: 2px;
-  width: 3rem;
+  width: 80px;
   background: #fff;
   display: block;
-  margin: 0 auto 1rem auto;
+  margin: 10px auto 60px auto;
+  box-shadow: 0px 0px 10px black;
 }
 
 /* Introducing section */
 
-#introducing {
+/* #introducing {
   background-color: var(--light-biege);
-}
+} */
 
 #introducing .flex-introducing {
   display: flex;
