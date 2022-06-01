@@ -23,7 +23,6 @@
 
 #header .hero-text h1 {
   position: relative;
-  /* z-index: 1; */
   font-weight: 300;
   color: #fff;
   font-size: 4rem;
@@ -31,10 +30,8 @@
 }
 
 #header .hero-text h2 {
-  /* text-transform: uppercase; */
   color: #fff;
   font-weight: 200;
-  /* font-style: italic; */
   padding: 30px 0 20px 0;
 }
 
@@ -118,7 +115,7 @@
 /* Section Intro */
 
 #section-intro {
-  margin-top: 50px;
+  margin: 20px 0;
   background: url("./img/flowers.jpg") no-repeat center/cover;
   text-align: center;
   height: 400px;
@@ -126,7 +123,7 @@
 
 #section-intro h2 {
   font-family: "Tiro Devanagari Marathi", serif;
-  padding: 60px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
   color: var(--primary-teal);
 }
 
@@ -134,37 +131,76 @@
   padding: 40px 20px 60px 20px;
 }
 
-/* Section Offer */
+/* Section: Treatments */
 
-#section-offer {
-  text-align: center;
-  margin-bottom: 100px;
+#section-treatments {
+  background-color: var(--light-blue);
+  /* margin: 50px 0; */
 }
 
-#section-offer .flex-offer {
+#section-treatments h2 {
+  padding: 0 0 20px 0;
+}
+#section-treatments .flex-treatments {
   display: flex;
   margin-top: 40px;
   flex-direction: row;
   justify-content: space-around;
-  height: 300px;
+
+  height: 250px;
+  width: auto;
 }
-#section-offer .offer-container {
+
+#section-treatments .flex-treatments .offer-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: auto;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 8px;
+}
+
+#section-treatments .flex-treatments .offer-container a {
+  z-index: 1;
+}
+
+#section-treatments .flex-treatments .offer-container img {
+  position: relative;
+  max-height: 100%;
+  width: auto;
+  z-index: -1;
+}
+/* #section-treatments .offer-container:hover, */
+#section-treatments .flex-treatments .offer-container::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+#section-treatments .flex-treatments .offer-container:hover:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease-in-out;
+  z-index: 2;
+}
+
+#section-treatments .flex-treatments .offer-container .flex-overlay-content {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  color: #fff;
+  /* justify-content: first baseline; */
   align-items: center;
-}
-
-#section-offer img {
-  height: 300px;
-  width: auto;
-  /* position: relative; */
-}
-
-#section-offer .btn {
-  width: 300px;
-  margin: 0;
-  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 /* Introducing section */

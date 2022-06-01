@@ -112,8 +112,12 @@ a:hover .overlay-light {
 }
 
 h2 {
+  font-family: "Tiro Devanagari Marathi", serif;
+  color: var(--primary-teal);
   text-align: center;
-  font-weight: 300;
   font-size: 2rem;
-  padding: 20px;
+}
+
+.section {
+  padding: 80px;
 }
