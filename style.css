@@ -1,4 +1,5 @@
 /* Header */
+
 #header .header-image:before {
   content: "";
   background: url("./img/header.jpg") no-repeat center center/cover;
@@ -10,11 +11,16 @@
 }
 
 #header .header-image {
-  background-color: rgba(0, 0, 0, 0.106);
+  background-color: rgba(0, 0, 0, 0.261);
+  height: var(--hero-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #header .hero-text {
-  height: 508px;
+  /* height: 100%; */
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,14 +39,14 @@
 #header .hero-text h2 {
   color: #fff;
   font-weight: 200;
-  padding: 30px 0 20px 0;
+  padding: 0px 0 20px 0;
   text-shadow: 0px 0px 10px black;
 }
 
 /* Navbar */
 #navbar {
   width: 100%;
-  background-color: #000000a9;
+  background-color: #000;
 }
 
 #navbar #logo {
@@ -56,7 +62,6 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* justify-content: flex-start; */
 }
 #navbar .vertical-line {
   border-left: 2px solid var(--light-blue);
@@ -93,13 +98,7 @@
   color: var(--primary-blue);
 }
 
-#navbar a:hover {
-  text-decoration: none;
-  color: var(--teal-blue);
-  transition: all ease-in-out 0.2s;
-}
-
-#navbar .navbar-flex li a.book {
+/* #navbar .navbar-flex li a.book {
   color: var(--light-blue);
   background-color: var(--primary-teal);
   text-transform: uppercase;
@@ -112,7 +111,7 @@
 #navbar .navbar-flex li a.book:hover {
   color: var(--primary-teal);
   transition: all 250ms ease-in-out;
-}
+} */
 
 /* Section Intro */
 
@@ -184,7 +183,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--light-blue);
   align-items: center;
   top: 50%;
   left: 50%;
@@ -193,7 +192,7 @@
 
 #section-treatments .flex-treatments .offer-container .flex-overlay-content h3 {
   padding: 20px;
-  color: #fff;
+  color: var(--light-blue);
   text-shadow: 0px 0px 10px black;
   cursor: pointer;
 }
@@ -205,7 +204,7 @@
 .bottom-line {
   height: 2px;
   width: 80px;
-  background: #fff;
+  background: var(--light-blue);
   display: block;
   margin: 10px auto 60px auto;
   box-shadow: 0px 0px 10px black;
@@ -217,21 +216,26 @@
   background-color: var(--light-biege);
 } */
 
-#introducing .flex-introducing {
+#offers .flex-offers {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 80px 0;
 }
 
-#introducing img {
+#offers .flex-offers img {
   width: 50%;
 }
 
-#introducing .info p {
+#offers .flex-offers .info p {
   padding: 40px;
 }
 
-#introducing .info {
+#offers .flex-offers .info h3 {
+  padding: 0 0 40px 0px;
+}
+
+#offers .flex-offers .info {
   text-align: center;
 }
 

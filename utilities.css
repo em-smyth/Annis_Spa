@@ -1,10 +1,10 @@
 :root {
-  --primary-blue: #97c8d8;
-  --primary-teal: #05384a;
+  --primary-blue: #97d8c2;
+  --primary-teal: #103d4d;
   --light-biege: #f7efe8;
-  --light-blue: #c7e8f6;
+  --light-blue: #f6ebc9;
 
-  --hero-height: 600px;
+  --hero-height: 650px;
 }
 
 /* reset */
@@ -44,7 +44,7 @@ a {
   margin: 5px;
   padding: 10px 20px;
   z-index: 1;
-  width: 124px;
+  width: 140px;
   height: 44px;
   text-align: center;
 }
@@ -88,9 +88,8 @@ a .overlay-dark {
   z-index: -1;
 }
 a:hover .overlay-dark {
-  width: 124px;
+  width: 140px;
   height: 46px;
-  background-color: var(--primary-teal);
   transition: all 250ms ease-in-out;
   z-index: -1;
 }
@@ -106,7 +105,7 @@ a .overlay-light {
 }
 
 a:hover .overlay-light {
-  width: 124px;
+  width: 140px;
   background-color: var(--light-blue);
   transition: all 250ms ease-in-out;
   z-index: -1;
