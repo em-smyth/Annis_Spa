@@ -98,21 +98,6 @@
   color: var(--primary-blue);
 }
 
-/* #navbar .navbar-flex li a.book {
-  color: var(--light-blue);
-  background-color: var(--primary-teal);
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 20px;
-  transition: all 250ms ease-in-out;
-}
-
-#navbar .navbar-flex li a.book:hover {
-  color: var(--primary-teal);
-  transition: all 250ms ease-in-out;
-} */
-
 /* Section Intro */
 
 #section-intro {
@@ -123,9 +108,7 @@
 }
 
 #section-intro h2 {
-  font-family: "Tiro Devanagari Marathi", serif;
   padding: 0 20px 20px 20px;
-  color: var(--primary-teal);
 }
 
 #section-intro p {
@@ -136,7 +119,6 @@
 
 #section-treatments {
   background-color: var(--light-biege);
-  /* margin: 50px 0; */
 }
 
 #section-treatments h2 {
@@ -248,12 +230,37 @@
 
 /* Reviews */
 
-#reviews .review {
+#section-reviews {
+  margin: 20px 0;
+  background: url("./img/pattern-background.jpg") no-repeat center/cover;
   text-align: center;
-  flex: 1;
-  background-color: var(--light-blue);
-  padding: 15px;
-  margin: 10px;
+  height: 400px;
+  z-index: -1;
+}
+
+#section-reviews .reviews-content i {
+  color: var(--primary-teal);
+}
+
+#section-reviews .reviews-content h2 {
+  padding: 0 20px 20px 20px;
+}
+
+#section-reviews .reviews-content p {
+  padding: 20px 20px 10px 20px;
+}
+
+#section-reviews .reviews-content .bottom-line {
+  height: 2px;
+  width: 80px;
+  background: var(--primary-teal);
+  display: block;
+  margin: 20px auto 10px auto;
+  box-shadow: 0px 0px 0px;
+}
+
+#section-reviews .reviews-content .name {
+  text-transform: uppercase;
 }
 
 /* Footer */
