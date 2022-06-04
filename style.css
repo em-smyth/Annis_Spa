@@ -46,17 +46,17 @@
 /* Navbar */
 #navbar {
   width: 100%;
-  background-color: #000;
+  background-color: #072732;
+  /* border-bottom: #000 solid 1px; */
 }
 
 #navbar #logo {
   display: inline-block;
-  width: 150px;
+  width: 130px;
 }
 
 #navbar ul.navbar-flex {
   padding: 1rem;
-  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -65,8 +65,7 @@
 }
 #navbar .vertical-line {
   border-left: 2px solid var(--light-blue);
-  /* padding: 20px 0px; */
-  height: 40px;
+  height: 38px;
 }
 
 #navbar .navbar-flex li {
@@ -183,20 +182,7 @@
   text-shadow: 0px 0px 10px black;
 }
 
-.bottom-line {
-  height: 2px;
-  width: 80px;
-  background: var(--light-blue);
-  display: block;
-  margin: 10px auto 60px auto;
-  box-shadow: 0px 0px 10px black;
-}
-
 /* Introducing section */
-
-/* #introducing {
-  background-color: var(--light-biege);
-} */
 
 #offers .flex-offers {
   display: flex;
@@ -231,7 +217,6 @@
 /* Reviews */
 
 #section-reviews {
-  margin: 20px 0;
   background: url("./img/pattern-background.jpg") no-repeat center/cover;
   text-align: center;
   height: 400px;
@@ -250,15 +235,6 @@
   padding: 20px 20px 10px 20px;
 }
 
-#section-reviews .reviews-content .bottom-line {
-  height: 2px;
-  width: 80px;
-  background: var(--primary-teal);
-  display: block;
-  margin: 20px auto 10px auto;
-  box-shadow: 0px 0px 0px;
-}
-
 #section-reviews .reviews-content .name {
   text-transform: uppercase;
 }
@@ -266,83 +242,82 @@
 /* Footer */
 
 #footer {
-  background-color: var(--light-biege);
-  /* height: 200px; */
+  background-color: #072732;
+  color: var(--light-blue);
+  font-weight: 150;
 }
+
+#footer .newsletter {
+  padding: 60px 0 30px 0;
+  border-bottom: var(--primary-teal) solid 1px;
+}
+#footer h3 {
+  color: var(--light-blue);
+  padding: 0 0 10px 0;
+}
+
+#footer form input {
+  width: 500px;
+  padding: 20px;
+  height: 44px;
+  margin: 30px;
+  border: #ccc solid 1px;
+  border-radius: 1px;
+}
+
+/* #footer .bottom-line {
+  height: 1px;
+  width: 300px;
+  background: var(--light-blue);
+  display: block;
+  margin: 20px auto 60px auto;
+  box-shadow: 0px 0px 0px black;
+} */
 
 #footer .flex-footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  padding: 30px 0 30px 0;
+  border-bottom: var(--primary-teal) solid 1px;
 }
 
-#footer .flex-footer img {
-  width: 120px;
-  height: auto;
+#footer .flex-footer h3 {
+  text-align: start;
 }
 
 #footer .footer-column {
   flex: 1;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 110px;
+  padding: 0 50px;
 }
 
-/* Footer column left */
-#footer .footer-column-left {
-  text-align: center;
-  padding: 10px 0;
+#footer .footer-column a {
+  text-decoration: none;
+  color: var(--light-blue);
 }
-
-#footer .footer-column-left p,
-#footer .footer-column-left a {
-  padding: 10px;
-}
-#footer .footer-column-left .contact-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#footer .footer-column-left a {
-  color: var(--primary-teal);
-}
-#footer .footer-column-left a:hover {
+#footer .footer-column a:hover {
   color: var(--primary-blue);
-}
-
-/* Footer column middle */
-
-#footer .footer-column-middle {
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Footer column right */
-#footer .footer-column-right {
-  text-align: center;
-  padding: 10px 0;
 }
 
 #footer .footer-column-right .icons {
   display: flex;
   flex-direction: row;
-  padding: 10px;
 }
 
-#footer .footer-column-right p {
-  padding: 10px;
-}
-
-#footer .footer-column-right .icons .fa-brands {
-  color: var(--primary-teal);
-  padding: 3px 10px;
+#footer .footer-column .icons .fa-brands {
+  color: var(--light-blue);
+  padding: 5px 10px 5px 0;
   transition: color 500ms ease-out;
 }
-#footer .footer-column-right .icons .fa-brands:hover {
+#footer .footer-column .icons .fa-brands:hover {
   color: var(--primary-blue);
   transition: none;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding: 20px 0;
 }
