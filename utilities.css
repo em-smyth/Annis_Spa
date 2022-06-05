@@ -77,7 +77,7 @@ ul {
 }
 
 .btn-dark:hover {
-  /* color: var(--primary-teal); */
+  color: var(--primary-teal);
   transition: all 250ms ease-in-out;
 }
 
@@ -86,7 +86,7 @@ a .overlay-dark {
   width: 0px;
   height: 46px;
   margin: -35px -20px;
-  background-color: var(--primary-blue);
+  background-color: var(--primary-teal);
   transition: all 250ms ease-in-out;
   z-index: -1;
   border-radius: 1px;
@@ -104,7 +104,7 @@ a .overlay-light {
   width: 0px;
   height: 46px;
   margin: -35px -20px;
-  background-color: var(--primary-blue);
+  background-color: var(--light-blue);
   transition: all 250ms ease-in-out;
   z-index: -1;
   border-radius: 1px;
@@ -115,6 +115,12 @@ a:hover .overlay-light {
   transition: all 250ms ease-in-out;
   z-index: -1;
   border-radius: 1px;
+}
+
+h1 {
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: 4rem;
+  font-weight: 50;
 }
 
 h2 {
