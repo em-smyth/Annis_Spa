@@ -187,3 +187,40 @@ h3 {
   margin: 10px auto 60px auto;
   box-shadow: 0px 0px 10px black;
 }
+
+/* Reveal */
+.reveal {
+  position: relative;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.reveal.active {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+.reveal-left {
+  position: relative;
+  transform: translate(-80px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.reveal-left.active {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+.reveal-right {
+  position: relative;
+  transform: translate(80px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.reveal-right.active {
+  transform: translate(0px);
+  opacity: 1;
+}

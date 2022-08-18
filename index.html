@@ -36,7 +36,7 @@
         </div>
       </nav>
 
-      <div class="hero-text">
+      <div class="hero-text reveal">
         <h2> ANNIS SPA & SALON</h2>
         <h1>Retreat, Restore, Relax</h1>
         <div class="btn-flex-row">
@@ -52,7 +52,7 @@
   </header>
 
   <section id="section-intro" class="section">
-    <div class="container">
+    <div class="container reveal">
       <div class="intro-content">
         <h2>Your Wellbeing & Beauty Come First</h2>
         <p>
@@ -74,46 +74,48 @@
     <div class="container">
       <div class="treatments-content">
         <h2>Treatments</h2>
-        <div class="flex-treatments">
+        <div class="reveal">
+          <div class="flex-treatments">
 
-          <a class="offer-container" id="massage" href="treatments.html">
-            <img src="./img/massage.jpg" alt="treatments" />
-            <div class="flex-overlay-content">
-              <i class="fa-solid fa-hands-bubbles fa-3x"></i>
-              <h3>MASSAGE</h3>
-              <div class="bottom-line"></div>
-            </div>
-          </a>
-          <a class="offer-container" id="aromatherapy" href="treatments.html">
-            <img src="./img/aromatherapy.jpg" alt="aromatherapy" />
-            <div class="flex-overlay-content">
-              <i class="fa-brands fa-pagelines fa-3x"></i>
-              <h3>AROMATHERAPY</h3>
-              <div class="bottom-line"></div>
-            </div>
-          </a>
-          <a class="offer-container" id="facials" href="treatments.html">
-            <img src="./img/facials.jpg" alt="facials" />
-            <div class="flex-overlay-content">
-              <i class="fa-solid fa-spa fa-3x"></i>
+            <a class="offer-container" id="massage" href="treatments.html">
+              <img src="./img/massage.jpg" alt="treatments" />
+              <div class="flex-overlay-content">
+                <i class="fa-solid fa-hands-bubbles fa-3x"></i>
+                <h3>MASSAGE</h3>
+                <div class="bottom-line"></div>
+              </div>
+            </a>
+            <a class="offer-container" id="aromatherapy" href="treatments.html">
+              <img src="./img/aromatherapy.jpg" alt="aromatherapy" />
+              <div class="flex-overlay-content">
+                <i class="fa-brands fa-pagelines fa-3x"></i>
+                <h3>AROMATHERAPY</h3>
+                <div class="bottom-line"></div>
+              </div>
+            </a>
+            <a class="offer-container" id="facials" href="treatments.html">
+              <img src="./img/facials.jpg" alt="facials" />
+              <div class="flex-overlay-content">
+                <i class="fa-solid fa-spa fa-3x"></i>
 
-              <h3>FACIALS</h3>
-              <div class="bottom-line"></div>
-            </div>
-          </a>
-        </div>
-        <div class="btn-flex-row">
-          <a href="treatments.html" class="btn btn-dark">View All<div class="overlay-light"></div></a>
+                <h3>FACIALS</h3>
+                <div class="bottom-line"></div>
+              </div>
+            </a>
+          </div>
+          <div class="btn-flex-row">
+            <a href="treatments.html" class="btn btn-dark">View All<div class="overlay-light"></div></a>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <section id="offers">
     <div class="container">
       <div class="flex-offers">
-        <img src="/img/offers.jpg" alt="" />
-        <div class="info">
+        <img class="reveal-left" src="/img/offers.jpg" alt="" />
+
+        <div class="info reveal-right">
           <h2>Enjoy An Unforgettable Day At The Spa</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -124,15 +126,16 @@
           <div class="btn-flex-row">
             <a class="btn btn-dark" href="deals.html">View Offers <div class="overlay-light"></div></a>
           </div>
+
         </div>
       </div>
     </div>
   </section>
-
+  </div>
 
   <section id="section-reviews" class="section">
     <div class="container">
-      <div class="reviews-content">
+      <div class="reviews-content reveal">
         <h2>Reviews</h2>
         <div class="carousel review-carousel">
           <div class="carousel-item carousel-item1">
@@ -185,7 +188,11 @@
 
 
   <footer id="footer">
+
     <div class="container">
+      <button id="back-to-top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
       <div class="newsletter">
         <h3>Join Our Newsletter</h3>
         <form <label for="email"></label>
