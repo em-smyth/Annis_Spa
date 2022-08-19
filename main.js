@@ -123,28 +123,44 @@ function revealRight() {
 
 // Back to top button
 
+const backToTopButton = document.querySelector("#back-to-top-btn");
+
 window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
-  const backToTopButton = document.querySelector("#back-to-top");
-  backToTopButton.addEventListener("click", backToTop);
-
-  let windowHeight = window.innerHeight;
-  let revealtop = backToTopButton.getBoundingClientRect().top;
-  let revealpoint = 250;
-
-  // // console.log("==============");
-  console.log("(S)reveal top: " + revealtop);
-  console.log("(B)window height: " + (windowHeight - revealpoint));
-  // // console.log("==============");
-
-  if (revealtop < windowHeight - revealpoint) {
-    console.log(" ADD ACTIVE!!!");
-    backToTopButton.classList.add("active");
-  } else {
+  if (window.pageYOffset > 2100) {
+    // Show backToTopButton
+    if (!backToTopButton.classList.contains("btnEntrance")) {
+      // backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
+      // } else {
+      // Hide backToTopButton
+      // if (backToTopButton.classList.contains("btnEntrance")) {
+      //   backToTopButton.classList.remove("btnEntrance");
+      //   backToTopButton.classList.add("btnExit");
+      //   setTimeout(function () {
+      //     backToTopButton.style.display = "none";
+      //   }, 250);
+      // }
+    }
   }
 }
-
+backToTopButton.addEventListener("click", backToTop);
 function backToTop() {
   window.scrollTo(0, 0);
 }
+// let windowHeight = window.innerHeight;
+// let revealtop = backToTopButton.getBoundingClientRect().top;
+// let revealpoint = 250;
+
+// // console.log("==============");
+// console.log("(S)reveal top: " + revealtop);
+// console.log("(B)window height: " + (windowHeight - revealpoint));
+// // console.log("==============");
+
+//   if (revealtop < windowHeight - revealpoint) {
+//     console.log(" ADD ACTIVE!!!");
+//     backToTopButton.classList.add("active");
+//   } else {
+// }
