@@ -16,7 +16,9 @@
   .container {
     max-width: 480px;
   }
+  /* NavBar */
 
+  /* Homepage */
   /* Section Intro */
   #section-intro {
     height: 460px;
@@ -60,22 +62,177 @@
   }
 
   /* Deals */
-  #offers .flex-offers {
-    flex-direction: column;
-    padding: 80px 0;
-    height: 700px;
+  #offers .grid-offers {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr 1fr;
+    grid-template-areas:
+      "h2"
+      "img"
+      "p"
+      "h3"
+      "btn";
+    padding: 40px 0 40px 0;
   }
 
-  #offers .flex-offers img {
+  #offers .grid-offers img {
+    padding: 10px 30px 0 30px;
+  }
+
+  #offers .grid-offers p {
+    padding: 0 10px 0 10px;
+  }
+
+  #offers .grid-offers h3 {
+    padding: 0 0 10px 0px;
+  }
+
+  #offers .grid-offers #btn {
+    grid-area: btn;
+  }
+
+  /* Footer */
+
+  #footer .btn-flex-row {
+    flex-direction: column;
+  }
+
+  #footer h3 {
+    padding: 0;
+  }
+
+  #footer p {
+    text-align: center;
+  }
+
+  #footer form input {
     width: 80%;
   }
 
-  #offers .flex-offers .info p {
-    padding: 20px;
+  #footer .flex-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
   }
 
-  #offers .flex-offers .info h3 {
-    padding: 0 0 20px 0px;
-    font-size: 1.5rem;
+  #footer .flex-footer h3 {
+    text-align: center;
+  }
+
+  #footer .footer-column {
+    /* flex: 1; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 20px 0px;
+  }
+
+  #footer .footer-column a {
+    display: block;
+    text-align: center;
+  }
+
+  #footer .footer-column-right .icons {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+  }
+
+  #footer .footer-column .icons .fa-brands {
+    padding: 5px 10px 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  #navbar .navbar-links-flex {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 10vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    /* outline: 2px solid red; */
+  }
+
+  #navbar .navbar-links-flex li {
+    opacity: 0;
+  }
+
+  #navbar .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  #navbar .navbar-links-flex.nav-active {
+    transform: translateX(0);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /* footer */
+  /* Footer */
+
+  #footer .btn-flex-row {
+    flex-direction: column;
+  }
+
+  #footer h3 {
+    padding: 0;
+  }
+
+  #footer p {
+    text-align: center;
+  }
+
+  #footer form input {
+    width: 80%;
+  }
+
+  #footer .flex-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+  }
+
+  #footer .flex-footer h3 {
+    text-align: center;
+  }
+
+  #footer .footer-column {
+    /* flex: 1; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 20px 0px;
+  }
+
+  #footer .footer-column a {
+    display: block;
+    text-align: center;
+  }
+
+  #footer .footer-column-right .icons {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+  }
+
+  #footer .footer-column .icons .fa-brands {
+    padding: 5px 10px 5px 0;
   }
 }

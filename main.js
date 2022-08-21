@@ -1,8 +1,38 @@
+// Burger Menu
+
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navbar-links-flex");
+  const navLinks = document.querySelectorAll(`.navbar-links-flex li`);
+  console.log(navLinks);
+
+  // Toggle Nav
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    // Animate Links
+    navLinks.forEach((link, index) => {
+      const linkTiming = index / 7 + 0.2;
+      console.log(linkTiming);
+      console.log("Index" + index);
+      if (link.style.animation) {
+        link.style.animation = ``;
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${linkTiming}s`;
+      }
+    });
+
+    // Burger animation
+    burger.classList.toggle("toggle");
+  });
+};
+
+navSlide();
+
 // Carousel
 
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const items = carousel.querySelectorAll(".carousel-item");
-  console.log("items", items);
+  // console.log("items", items);
   const buttonsHtml = Array.from(items, () => {
     return `<span class="carousel-button"></span>`;
   });

@@ -48,11 +48,11 @@
 /* Navbar */
 #navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background-color: var(--light-biege);
   /* background-color: #f8f4f176; */
   border-bottom: var(--light-blue) solid 1px;
-  height: 80px;
+  height: 10vh;
   z-index: 5;
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.428);
 }
@@ -77,7 +77,7 @@
 
 #navbar .navbar-flex li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
 }
 
@@ -93,6 +93,14 @@
   transition: all 250ms ease-in-out;
 }
 
+#navbar .navbar-links-flex {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+}
+
 #navbar .navbar-flex li a {
   padding: 0 20px;
   color: var(--primary-teal);
@@ -104,7 +112,25 @@
   color: var(--primary-teal);
   font-weight: 400;
 }
+#navbar .burger-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 
+#navbar .burger {
+  display: none;
+  padding: 20px;
+}
+
+#navbar .burger div {
+  width: 25px;
+  height: 1.5px;
+  background-color: #072732;
+  margin: 8px;
+  transition: all 0.3s ease;
+}
 /* Section Intro */
 
 #section-intro {
@@ -190,16 +216,9 @@
   text-shadow: 0px 0px 10px black;
 }
 
-/* Introducing section */
+/* Offers section */
 
-/* #offers .flex-offers {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 80px 0;
-} */
-
-#offers .flex-offers {
+#offers .grid-offers {
   display: grid;
   grid-template-columns: (auto-fit, minmax(300px, 1fr));
   grid-template-columns: 1fr 1fr;
@@ -213,34 +232,34 @@
   padding: 80px 0 80px 0;
 }
 
-#offers .flex-offers img {
+#offers .grid-offers img {
   grid-area: img;
   width: 100%;
   padding: 20px;
 }
 
-#offers .flex-offers .info h2 {
-  /* padding-top: 20px; */
+#offers .grid-offers h2 {
   grid-area: h2;
 }
 
-#offers .flex-offers .info p {
+#offers .grid-offers p {
   padding: 40px;
   grid-area: p;
 }
 
-#offers .flex-offers .info h3 {
+#offers .grid-offers h3 {
   grid-area: h3;
-  padding: 0 0 40px 0px;
 }
 
-#offers .flex-offers #btn {
+#offers .grid-offers #btn {
   grid-area: btn;
 }
 
-#offers .flex-offers .info {
+#offers .grid-offers {
   text-align: center;
 }
+
+/* Reviews */
 
 #reviews .flex-reviews {
   display: flex;
@@ -249,12 +268,10 @@
   /* flex: 1 100 0; */
 }
 
-/* Reviews */
-
 #section-reviews {
   background: url("./img/pattern-background.jpg") no-repeat center/cover;
   text-align: center;
-  height: 500px;
+  height: 100%;
   z-index: -1;
 }
 

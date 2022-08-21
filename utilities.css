@@ -236,17 +236,6 @@ h3 {
   animation-name: btnEntrance;
 }
 
-/* Zoom in */
-/* @keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  to {
-    opacity: 1;
-  }
-}  */
-
 /* fadeIn */
 @keyframes btnEntrance {
   from {
@@ -265,17 +254,6 @@ h3 {
   animation-name: btnExit;
 }
 
-/* ZoomOUt */
-/* @keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-} */
-
 /* Fade out down */
 @keyframes btnExit {
   from {
@@ -284,5 +262,17 @@ h3 {
   to {
     opacity: 0;
     /* transform: translate3d(0, 100%, 0); */
+  }
+}
+
+/* Burger Menu */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
