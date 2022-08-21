@@ -192,23 +192,50 @@
 
 /* Introducing section */
 
-#offers .flex-offers {
+/* #offers .flex-offers {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 80px 0;
+} */
+
+#offers .flex-offers {
+  display: grid;
+  grid-template-columns: (auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 100px;
+  grid-template-areas:
+    "img h2"
+    "img p"
+    "img h3"
+    "img btn";
+  align-items: center;
+  padding: 80px 0 80px 0;
 }
 
 #offers .flex-offers img {
-  width: 50%;
+  grid-area: img;
+  width: 100%;
+  padding: 20px;
+}
+
+#offers .flex-offers .info h2 {
+  /* padding-top: 20px; */
+  grid-area: h2;
 }
 
 #offers .flex-offers .info p {
   padding: 40px;
+  grid-area: p;
 }
 
 #offers .flex-offers .info h3 {
+  grid-area: h3;
   padding: 0 0 40px 0px;
+}
+
+#offers .flex-offers #btn {
+  grid-area: btn;
 }
 
 #offers .flex-offers .info {
@@ -236,7 +263,7 @@
 }
 
 #section-reviews .reviews-content h2 {
-  padding: 0 20px 20px 20px;
+  padding: 20px;
 }
 
 #section-reviews .reviews-content p {

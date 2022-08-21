@@ -61,7 +61,7 @@
 
   /* Deals */
   #offers .flex-offers {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 80px 0;
     height: 700px;
   }
