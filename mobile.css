@@ -1,9 +1,17 @@
+@media (max-width: 1400px) {
+  #section-treatments .flex-treatments {
+    height: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #section-treatments .flex-treatments {
+    height: 200px;
+  }
+}
+
 @media (max-width: 1023px) {
   #navbar #logo {
-    /* display: block; */
-    /* position: absolute; */
-    /* left: 35vw; */
-    /* top: 1vh; */
     width: 220px;
     margin-left: 141px;
   }

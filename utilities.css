@@ -47,7 +47,7 @@ ul {
   margin: 5px;
   padding: 10px 20px;
   z-index: 1;
-  width: 140px;
+  width: 145px;
   height: 44px;
   text-align: center;
   border-radius: 1px;
@@ -93,7 +93,7 @@ a .overlay-dark {
   border-radius: 1px;
 }
 a:hover .overlay-dark {
-  width: 140px;
+  width: 145px;
   height: 46px;
   transition: all 250ms ease-in-out;
   z-index: -1;
@@ -112,7 +112,7 @@ a .overlay-light {
 }
 
 a:hover .overlay-light {
-  width: 140px;
+  width: 145px;
   transition: all 250ms ease-in-out;
   z-index: -1;
   border-radius: 1px;

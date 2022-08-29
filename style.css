@@ -176,8 +176,9 @@
 }
 
 #section-treatments .flex-treatments .offer-container img {
-  max-height: 100%;
+  /* max-height: auto; */
   width: auto;
+  /* width: 50px; */
 }
 
 #section-treatments .flex-treatments .offer-container::before {
@@ -221,8 +222,11 @@
 
 #offers .grid-offers {
   display: grid;
-  grid-template-columns: (auto-fit, minmax(300px, 1fr));
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: minmax(300px, 1fr) repeat(auto-fill, 200px), 20%; */
+  grid-template-columns: 1.4fr 1fr;
+
+  /* repeat(auto-fill, 200px) 20%; */
+  /* grid-template-columns: 1fr 1fr; */
   grid-auto-rows: 100px;
   grid-template-areas:
     "img h2"
@@ -241,6 +245,7 @@
 
 #offers .grid-offers h2 {
   grid-area: h2;
+  padding: 0 40px;
 }
 
 #offers .grid-offers p {
