@@ -1,3 +1,4 @@
+/* Constants */
 /* Header */
 
 #header .header-image:before {
@@ -170,7 +171,7 @@
 #section-treatments .flex-treatments .offer-container {
   position: relative;
   display: flex;
-  /* height: auto; */
+  height: auto;
   width: auto;
   margin: 8px;
 }
