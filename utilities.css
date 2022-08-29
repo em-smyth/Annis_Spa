@@ -19,6 +19,7 @@ html,
 body {
   font-family: "Heebo", sans-serif;
   color: var(--primary-teal);
+  overflow-x: hidden;
 }
 
 img {
@@ -153,7 +154,7 @@ h3 {
 }
 
 .carousel-item {
-  height: 250px;
+  height: 140px;
   display: none;
 }
 .carousel-item-selected {
@@ -164,9 +165,9 @@ h3 {
 .carousel-nav {
   width: 100%;
   padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
   text-align: center;
 }
 

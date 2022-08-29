@@ -52,7 +52,7 @@
   background-color: var(--light-biege);
   /* background-color: #f8f4f176; */
   border-bottom: var(--light-blue) solid 1px;
-  height: 10vh;
+  height: 75px;
   z-index: 5;
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.428);
 }
@@ -60,6 +60,14 @@
 #navbar #logo {
   display: inline-block;
   width: 170px;
+}
+
+#navbar .burger-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* flex: 10 2 auto; */
 }
 
 #navbar ul.navbar-flex {
@@ -96,7 +104,7 @@
 #navbar .navbar-links-flex {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 50%;
   justify-content: space-around;
   align-items: center;
 }
@@ -112,16 +120,9 @@
   color: var(--primary-teal);
   font-weight: 400;
 }
-#navbar .burger-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
 
 #navbar .burger {
   display: none;
-  padding: 20px;
 }
 
 #navbar .burger div {
@@ -137,7 +138,7 @@
   margin: 20px 0;
   background: url("./img/flowers.jpg") no-repeat center/cover;
   text-align: center;
-  height: 450px;
+  height: 100%;
 }
 
 #section-intro h2 {
