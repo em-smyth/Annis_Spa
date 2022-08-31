@@ -195,40 +195,28 @@ h3 {
 }
 
 /* Reveal */
-.reveal {
+.reveal-top {
   position: relative;
   transform: translateY(80px);
   opacity: 0;
-  transition: all 1s ease-in-out;
-}
-
-.reveal.active {
-  transform: translate(0px);
-  opacity: 1;
 }
 
 .reveal-left {
   position: relative;
   transform: translate(-80px);
   opacity: 0;
-  transition: all 1s ease-in-out;
-}
-
-.reveal-left.active {
-  transform: translate(0px);
-  opacity: 1;
 }
 
 .reveal-right {
   position: relative;
   transform: translate(80px);
   opacity: 0;
-  transition: all 1s ease-in-out;
 }
 
-.reveal-right.active {
+.reveal-action.active {
   transform: translate(0px);
   opacity: 1;
+  transition: all 1s ease-in-out;
 }
 
 .btnEntrance {
