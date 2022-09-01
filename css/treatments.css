@@ -1,0 +1,69 @@
+/* Treatments Page*/
+
+#section-treatments {
+  background: url("/img/pattern-background.jpg") no-repeat center/cover;
+  /* z-index: -1; */
+}
+
+#section-treatments h3 {
+  text-align: left;
+  display: inline-block;
+}
+
+#section-treatments h4 {
+  font-weight: 300;
+  display: inline-block;
+}
+
+#section-treatments p {
+  display: inline-block;
+}
+
+.treatments-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.treatments-flex .treatments-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 50%;
+  padding: 20px;
+}
+.treatments-flex .treatments-column h2 {
+  text-align: center;
+}
+.treatments-flex .treatments-column h4.from {
+  text-align: right;
+}
+
+.treatments-flex .treatments-column h3 {
+  text-align: right;
+}
+
+.treatments-flex .treatments-column .treatment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  /* width: 300px; */
+}
+
+.treatments-flex .treatments-column .treatment .title {
+}
+.treatments-flex .treatments-column .treatment .dotted-line {
+  border-bottom: 2px dotted rgb(0, 0, 0);
+  flex: 1;
+  flex-grow: grow;
+  align-self: flex-end;
+  transform: translateY(-12px);
+}
+.treatments-flex .treatments-column .treatment .price {
+}

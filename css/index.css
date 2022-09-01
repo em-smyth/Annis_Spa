@@ -3,7 +3,7 @@
 
 #header .header-image:before {
   content: "";
-  background: url("./img/header.jpg") no-repeat center center/cover;
+  background: url("/img/header.jpg") no-repeat center center/cover;
   opacity: 0.9;
   position: absolute;
   width: 100vw;
@@ -137,7 +137,7 @@
 
 #section-intro {
   margin: 20px 0;
-  background: url("./img/flowers.jpg") no-repeat center/cover;
+  background: url("/img/flowers.jpg") no-repeat center/cover;
   text-align: center;
   height: 100%;
 }
@@ -176,25 +176,19 @@
   margin: 8px;
 }
 
-#section-treatments .flex-treatments .offer-container img {
-  /* max-height: auto; */
-  width: auto;
-  /* width: 50px; */
-}
-
 #section-treatments .flex-treatments .offer-container::before {
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.2);
   height: 100%;
   width: 100%;
-  transition: all 300ms ease-in-out;
+  /* transition: all 300ms ease-in-out; */
   cursor: pointer;
 }
 
 #section-treatments .flex-treatments .offer-container:hover:before {
   background-color: rgba(0, 0, 0, 0.5);
-  transition: all 300ms ease-in-out;
+  /* transition: all 300ms ease-in-out; */
 }
 
 #section-treatments .flex-treatments .offer-container .flex-overlay-content {
@@ -276,7 +270,7 @@
 }
 
 #section-reviews {
-  background: url("./img/pattern-background.jpg") no-repeat center/cover;
+  background: url("/img/pattern-background.jpg") no-repeat center/cover;
   text-align: center;
   height: 100%;
   z-index: -1;

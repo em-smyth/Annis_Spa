@@ -116,6 +116,9 @@ const revealAction = () => {
 
       if (revealtop < windowheight - revealpoint) {
         elementsToReveal[i].classList.add("active");
+        if (i === 2) {
+          console.log("add active");
+        }
       }
     }
   }
@@ -126,9 +129,10 @@ const addLeadingZeros = (num, totalLength) => {
   return String(num).padStart(totalLength, "0");
 };
 
-// Reveal All elements
-window.addEventListener("scroll", revealAction);
-window.addEventListener("load", revealAction);
 burgerMenuSlide(); // burger menu
 carousel(); // carousel
 backToTopButton(); // back to top button
+// Reveal All elements
+window.addEventListener("scroll", revealAction);
+window.addEventListener("load", revealAction);
+window.addEventListener("resize", revealAction);
