@@ -1,21 +1,21 @@
 /* Treatments Page*/
 
-#section-treatments {
+#section-treatments-page {
   background: url("/img/pattern-background.jpg") no-repeat center/cover;
   /* z-index: -1; */
 }
 
-#section-treatments h3 {
+#section-treatments-page h3 {
   text-align: left;
   display: inline-block;
 }
 
-#section-treatments h4 {
+#section-treatments-page h4 {
   font-weight: 300;
   display: inline-block;
 }
 
-#section-treatments p {
+#section-treatments-page p {
   display: inline-block;
 }
 
@@ -56,14 +56,10 @@
   /* width: 300px; */
 }
 
-.treatments-flex .treatments-column .treatment .title {
-}
 .treatments-flex .treatments-column .treatment .dotted-line {
   border-bottom: 2px dotted rgb(0, 0, 0);
   flex: 1;
   flex-grow: grow;
   align-self: flex-end;
   transform: translateY(-12px);
-}
-.treatments-flex .treatments-column .treatment .price {
 }

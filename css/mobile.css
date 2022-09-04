@@ -35,6 +35,7 @@
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
+    border-left: 1px solid rgb(174, 174, 174);
     /* outline: 2px solid red; */
   }
 
@@ -53,7 +54,7 @@
   }
 
   .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-7px, 8px);
   }
 
   .toggle .line2 {
@@ -153,6 +154,28 @@
   #footer .footer-column a {
     font-size: 0.8rem;
   }
+
+  /* Treatments Page */
+
+  .treatments-flex .treatments-column {
+    flex: 100%;
+    justify-content: flex-start;
+    /* flex-wrap: nowrap; */
+  }
+
+  .treatments-flex .treatments-column .treatment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .treatments-flex .treatments-column .treatment p {
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -160,6 +183,7 @@
     height: 1500px;
   }
 }
+
 @media (max-width: 766px) {
   /* Utilities */
   h1 {
@@ -322,6 +346,10 @@
   #footer .flex-footer {
     width: 350px;
   }
+
+  #section-treatments-page h1 {
+    padding: 80px 0 0 0;
+  }
 }
 
 @media (max-width: 498px) {
@@ -355,6 +383,27 @@
   }
   .carousel-item {
     height: 200px;
+  }
+
+  /* Treatments Page */
+
+  .treatments-flex .treatments-column .treatment {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .treatments-flex .treatments-column .treatment .dotted-line {
+    display: none;
+  }
+
+  .treatments-flex .treatments-column .treatment p {
+    text-align: center;
+  }
+  .treatments-flex .treatments-column .treatment h3 {
+    font-size: 1.5rem;
+  }
+  .treatments-flex .treatments-column .treatment h4 {
+    padding: 0 10px;
   }
 }
 
