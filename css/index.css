@@ -310,6 +310,7 @@
 }
 #footer #back-to-top-btn {
   display: none;
+  /* visibility: hidden; */
   font-size: 20px;
   width: 50px;
   height: 50px;
@@ -324,8 +325,8 @@
 
 /* #footer #back-to-top.active {
   background-color: rgba(7, 39, 50, 1);
-  /* display: block; */
-/* } */
+  display: block;
+} */
 
 #footer #back-to-top-btn:hover,
 #back-to-top-btn:focus {

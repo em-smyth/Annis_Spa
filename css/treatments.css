@@ -5,6 +5,12 @@
   /* z-index: -1; */
 }
 
+#section-treatments-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+}
+
 #section-treatments-page h3 {
   text-align: left;
   display: inline-block;
@@ -17,6 +23,11 @@
 
 #section-treatments-page p {
   display: inline-block;
+}
+
+#section-treatments-page .btn-flex-row {
+  padding: 50px 0 30px 0;
+  /* border: red 10px solid; */
 }
 
 .treatments-flex {

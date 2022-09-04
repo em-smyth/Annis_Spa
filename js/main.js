@@ -85,6 +85,10 @@ const backToTopButton = () => {
   window.addEventListener("scroll", scrollFunction);
 
   function scrollFunction() {
+    const btnPosition = backToTopButton.getBoundingClientRect().top;
+    console.log("btn pos: ", btnPosition);
+    console.log("btn pageOffsetY: ", window.pageYOffset);
+    console.log("----------------");
     if (window.pageYOffset > 2100) {
       // Show backToTopButton
       if (!backToTopButton.classList.contains("btnEntrance")) {
