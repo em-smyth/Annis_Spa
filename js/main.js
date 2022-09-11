@@ -11,7 +11,6 @@ const dropdownBookingDates = () => {
     // 2. Format correctly
     // Formatted dates
 
-    console.log(nextDay);
     let weekDay = nextDay.getDay();
 
     let month = nextDay.getMonth();
@@ -230,6 +229,37 @@ const revealAction = () => {
     }
   }
 };
+// ====================================================
+// Show and Hide Pop up Display
+
+const showPopUp = () => {
+  const revealMessages = document.querySelectorAll(".pop-up-message");
+
+  function showMessages(btnTargetData) {
+    console.log("clicked on: ", btnTargetData);
+
+    revealMessages.forEach((message) => {
+      let msgTargetData = message.dataset.target;
+      if (btnTargetData === msgTargetData) {
+        console.log("show msg with index: ", msgTargetData);
+        message.classList.remove("hidden");
+      } else {
+        console.log("hide msg with index: ", msgTargetData);
+        message.classList.add("hidden");
+      }
+    });
+  }
+
+  const btnPopUps = document.querySelectorAll(".pop-up");
+  btnPopUps.forEach((btnPopUp, btnIndex) => {
+    let btnTargetData = btnPopUp.dataset.target; // get data from html element
+    btnPopUp.addEventListener("click", function () {
+      showMessages(btnTargetData);
+    });
+  });
+};
+
+// ====================================================
 
 // Utility functions
 const addLeadingZeros = (num, totalLength) => {
@@ -240,6 +270,7 @@ burgerMenuSlide(); // burger menu
 carousel(); // carousel
 backToTopButton(); // back to top button
 dropdownBookingDates(); // get booking dates
+showPopUp(); //show pop up message
 // Reveal All elements
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);

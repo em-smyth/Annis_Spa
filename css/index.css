@@ -407,90 +407,36 @@
   padding: 20px 0;
 }
 
-/* Book Now Card */
-.book-now {
-  min-height: 80vh;
-  background: var(--light-biege);
+/* Pop-up Message */
+
+.pop-up-message.hidden {
+  display: none;
+}
+
+.pop-up-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #072732;
+  z-index: 9999;
+  border: var(--light-biege) 2px solid;
+  border-radius: 3px;
+}
+
+.pop-up-message .message-container {
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* color: #fff; */
-  padding: 20px 0;
 }
-
-.card-container {
-  box-sizing: border-box;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 40% 40%;
-  /* margin: auto; */
-  justify-content: center;
-  /* height: 100%; */
-  height: 500px;
-  margin-bottom: 100px;
-}
-
-.card-img {
-  background: url(/img/aromatherapy1.jpg) center/cover no-repeat;
-}
-
-.book-now h2 {
-  padding: 80px 0 30px 0;
-  margin: 20px 0;
-}
-
-.card-content {
-  background: #fff;
-  height: auto;
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* flex-direction: column; */
-}
-
-.card-content h3 {
-  text-align: center;
-  color: #072732;
-  padding: 40px 0;
-}
-
-.form-row {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-.form-row .btn-flex-row {
-  padding: 40px;
-}
-form select,
-form input {
-  display: block;
-  width: 100%;
-  margin: 15px 12px;
-  padding: 5px;
-  font-size: 18px;
-  border: none;
-  border-bottom: 1px solid rgb(195, 194, 194);
-}
-
-form input[type="text"],
-form input [type="number"],
-form input::placeholder,
-select {
-  color: #9a9a9a;
-}
-
-form input[type="submit"] {
+.pop-up-message .message-container > * {
   color: #fff;
-  background-color: #072732;
-  padding: 12px 0;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px;
+  text-align: center;
 }
 
-form input[type="submit"]:hover {
-  opacity: 0.9;
+.pop-up-message .message-container h4 {
+  font-weight: 200;
 }

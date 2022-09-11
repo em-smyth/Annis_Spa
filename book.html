@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/treatments.css" />
+  <link rel="stylesheet" href="./css/book.css" />
   <link rel="stylesheet" href="./css/mobile.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,6 +101,10 @@
 
       </div>
       <div class="form-row">
+        <input type="email" placeholder="Email">
+
+      </div>
+      <div class="form-row">
         <select name="Select Treatment">
           <option value="treatment-select">Select Treatment</option>
           <option value="treatment-select">Full Spa Day </option>
@@ -128,7 +133,7 @@
       </div>
       <div class="form-row">
         <div class="btn-flex-row info">
-          <a class=" btn btn-dark" href="book.html">Book Now <div class="overlay-light"></div></a>
+          <a data-target="#popUp_1" class=" btn btn-dark pop-up">Book Now <div class="overlay-light"></div></a>
         </div>
       </div>
     </div>
@@ -136,6 +141,26 @@
     </div>
     </div>
   </section>
+
+  <section data-target="#popUp_1" class="pop-up-message book hidden">
+    <div class="message-container">
+      <h3>Thank you!</h3>
+      <h4>You have successfully requested the following appointment. Please note your appointment is not booked until
+        you receive an
+        email confirmation, which may take up to 1 working day to be received.</h4>
+      <div class="btn-flex-row">
+        <a class="btn btn-light pop-up">Close<div class="overlay-dark"></div></a>
+  </section>
+
+  <section data-target="#popUp_2" class="pop-up-message hidden">
+    <div class="message-container">
+      <h3>Thank you!</h3>
+      <h4>You have successfully subscribed to the newsletter.</h4>
+      <div class="btn-flex-row">
+        <a class="btn btn-light pop-up">Close<div class="overlay-dark"></div></a>
+  </section>
+
+
 
   <footer id="footer">
 
@@ -151,7 +176,8 @@
 
           <div class="btn-flex-row">
             <input type="email" name="email" id="email" placeholder="Enter Email Address" />
-            <a class="btn btn-light" href="#">Subscribe <div class="overlay-dark"></div></a>
+            <a data-target="#popUp_2" class="btn btn-light pop-up">Subscribe <div class="overlay-dark"></div>
+            </a>
           </div>
         </form>
         <!-- <div class="bottom-line"></div> -->
