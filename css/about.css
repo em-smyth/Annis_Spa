@@ -1,0 +1,108 @@
+#about-page h1 {
+  padding: 120px 20px 0px 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* About Us */
+
+#about-page #about-annis {
+  background: url("/img/flowers.jpg") no-repeat center/cover;
+}
+
+#about-page #alderley-highstreet-flex {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-page #alderley-highstreet-flex img {
+  width: 30%;
+  padding: 20px;
+  align-items: center;
+}
+#about-page #alderley-highstreet-flex #about-annis-info {
+  text-align: center;
+}
+
+#about-page #alderley-highstreet-flex h3 {
+  padding: 20px;
+}
+
+#about-page #about-annis-info p {
+  padding: 20px;
+  text-align: center;
+}
+
+#about-page #alderley-highstreet-flex {
+  text-align: center;
+}
+
+/* Meet the Team */
+
+#about-page #meet-the-team {
+  background: url("/img/pattern-background.jpg") no-repeat center/cover;
+}
+
+#about-page #meet-the-team h2 {
+  padding: 40px 0 0 0;
+}
+
+#about-page #flex-team-photos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#about-page #flex-team-photos img {
+  padding: 20px;
+  border-radius: 600px;
+}
+
+#about-page #flex-team-photos #flex-team-member {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 30%;
+}
+
+#about-page #flex-team-photos #flex-team-member h3,
+#about-page #flex-team-photos #flex-team-member p {
+  padding: 5px;
+  text-align: center;
+}
+
+/* Directions */
+
+#about-page #find-us {
+  margin: 40px;
+}
+
+#about-page #find-us #flex-map {
+  display: flex;
+  height: 400px;
+  margin: 20px 0;
+}
+
+#about-page iframe {
+  width: 70%;
+  padding: 30px;
+}
+
+#about-page #find-us #flex-map #directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--light-biege);
+  width: auto;
+  margin: 30px 0;
+}
+
+#about-page #find-us #flex-map #directions h3,
+#about-page #find-us #flex-map #directions p {
+  text-align: center;
+  padding: 10px;
+}

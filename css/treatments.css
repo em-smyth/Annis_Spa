@@ -6,9 +6,13 @@
 }
 
 #section-treatments-page h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   padding: 20px;
+}
+
+#section-treatments-page h2 {
+  font-size: 1.5rem;
 }
 
 #section-treatments-page h3 {
