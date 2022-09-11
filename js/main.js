@@ -1,3 +1,110 @@
+// Set dates on booking page on dropdown list
+// day-select
+const dropdownBookingDates = () => {
+  // Get current date from tomorrow
+  const nextDay = new Date(); // set nextDay to today
+  nextDay.setDate(nextDay.getDate() + 1); // set nextDay to actual tomorrow bu geting today + 1
+
+  const bookingDays = document.querySelectorAll(".booking-date");
+  bookingDays.forEach((day, i) => {
+    // 1. For each to give the correct dates - done
+    // 2. Format correctly
+    // Formatted dates
+
+    console.log(nextDay);
+    let weekDay = nextDay.getDay();
+
+    let month = nextDay.getMonth();
+    let date = nextDay.getDate();
+    let year = nextDay.getFullYear();
+
+    day.innerText = `${getFormattedWeekDay(
+      weekDay
+    )} ${date} ${getFormattedMonth(month)} ${year}`; // Assign date to element
+    nextDay.setDate(nextDay.getDate() + 1); // Increment day by 1 (which gives us next day)
+  });
+};
+
+// Get formatted week day
+const getFormattedWeekDay = (weekDay) => {
+  let formattedWeekDay = "";
+  switch (weekDay) {
+    case 0:
+      formattedWeekDay = "Sunday";
+      break;
+    case 1:
+      formattedWeekDay = "Monday";
+      break;
+    case 2:
+      formattedWeekDay = "Tuesday";
+      break;
+    case 3:
+      formattedWeekDay = "Wednesday";
+      break;
+    case 4:
+      formattedWeekDay = "Thursday";
+      break;
+    case 5:
+      formattedWeekDay = "Friday";
+      break;
+    case 6:
+      formattedWeekDay = "Saturday";
+      break;
+    default:
+      throw new Error("Invalid Day");
+  }
+
+  return formattedWeekDay;
+};
+
+// Get formatted month
+const getFormattedMonth = (month) => {
+  let formattedMonth = "";
+  switch (month) {
+    case 0:
+      formattedMonth = "January";
+      break;
+    case 1:
+      formattedMonth = "February";
+      break;
+    case 2:
+      formattedMonth = "March";
+      break;
+    case 3:
+      formattedMonth = "April";
+      break;
+    case 4:
+      formattedMonth = "May";
+      break;
+    case 5:
+      formattedMonth = "June";
+      break;
+    case 6:
+      formattedMonth = "July";
+      break;
+    case 7:
+      formattedMonth = "August";
+      break;
+    case 8:
+      formattedMonth = "September";
+      break;
+    case 9:
+      formattedMonth = "October";
+      break;
+    case 10:
+      formattedMonth = "Novemeber";
+      break;
+    case 11:
+      formattedMonth = "December";
+      break;
+    default:
+      throw new Error("Invalid Month");
+  }
+  return formattedMonth;
+};
+
+// =============
+
 /**Burger Menu - This function slides burger menu into the viewport */
 const burgerMenuSlide = () => {
   const burger = document.querySelector(".burger");
@@ -119,9 +226,6 @@ const revealAction = () => {
 
       if (revealtop < windowheight - revealpoint) {
         elementsToReveal[i].classList.add("active");
-        if (i === 2) {
-          console.log("add active");
-        }
       }
     }
   }
@@ -135,6 +239,7 @@ const addLeadingZeros = (num, totalLength) => {
 burgerMenuSlide(); // burger menu
 carousel(); // carousel
 backToTopButton(); // back to top button
+dropdownBookingDates(); // get booking dates
 // Reveal All elements
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);

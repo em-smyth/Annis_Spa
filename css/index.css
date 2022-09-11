@@ -456,14 +456,13 @@
 
 .form-row {
   display: flex;
+  justify-content: center;
   width: 90%;
   margin: 0 auto;
   padding: 10px 0;
 }
 
 .form-row .btn-flex-row {
-  /* align-self: center; */
-  /* text-align: center; */
   padding: 40px;
 }
 form select,
