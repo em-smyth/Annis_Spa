@@ -28,17 +28,15 @@
           <div class="burger-flex">
             <ul class="navbar-flex">
               <a href="index.html"><img id="logo" src="./img/Logo-dark-landscape.png" alt="Annispa" /></a>
-              <div class="vertical-line"></div>
-              <div class="navbar-links-flex">
-                <li><a href="index.html">Home<div class="underline"></div></a></li>
-                <li><a href="Treatments.html">Treatments<div class="underline"></div></a></li>
-                <li><a href="About.html">About<div class="underline"></div></a></li>
+              <li><a href="index.html">Home<div class="underline"></div></a></li>
+              <li><a href="Treatments.html">Treatments<div class="underline"></div></a></li>
+              <li><a href="About.html">About<div class="underline"></div></a></li>
 
-                <div class="btn-flex-row">
-                  <a class="btn btn-dark" href="Book.html">Book Now <div class="overlay-light"></div></a>
+              <div class="btn-flex-row">
+                <a class="btn btn-dark" href="Book.html">Book Now <div class="overlay-light"></div></a>
 
-                </div>
               </div>
+
             </ul>
             <div class="burger">
               <div class="line1"></div>
@@ -196,12 +194,12 @@
   </section>
 
 
-  <section class="pop-up-message hidden">
+  <section data-target="#popUp_2" class="pop-up-message hidden">
     <div class="message-container">
       <h3>Thank you!</h3>
       <h4>You have successfully subscribed to the newsletter.</h4>
       <div class="btn-flex-row">
-        <a class="btn btn-light pop-up">Close<div class="overlay-dark"></div></a>
+        <a data-target="#popUp_2" class="btn btn-light close">Close<div class="overlay-dark"></div></a>
   </section>
 
 
@@ -221,7 +219,7 @@
 
           <div class="btn-flex-row">
             <input type="email" name="email" id="email" placeholder="Enter Email Address" />
-            <a class="btn btn-light pop-up">Subscribe <div class="overlay-dark"></div></a>
+            <a data-target="#popUp_2" class="btn btn-light pop-up">Subscribe <div class="overlay-dark"></div></a>
           </div>
         </form>
         <!-- <div class="bottom-line"></div> -->

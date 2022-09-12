@@ -230,21 +230,21 @@ const revealAction = () => {
   }
 };
 // ====================================================
-// Show and Hide Pop up Display
+// Show Pop up Display
 
 const showPopUp = () => {
   const revealMessages = document.querySelectorAll(".pop-up-message");
 
   function showMessages(btnTargetData) {
-    console.log("clicked on: ", btnTargetData);
+    // console.log("clicked on: ", btnTargetData);
 
     revealMessages.forEach((message) => {
       let msgTargetData = message.dataset.target;
       if (btnTargetData === msgTargetData) {
-        console.log("show msg with index: ", msgTargetData);
+        // console.log("show msg with index: ", msgTargetData);
         message.classList.remove("hidden");
       } else {
-        console.log("hide msg with index: ", msgTargetData);
+        // console.log("hide msg with index: ", msgTargetData);
         message.classList.add("hidden");
       }
     });
@@ -260,6 +260,33 @@ const showPopUp = () => {
 };
 
 // ====================================================
+// Hide Pop up Display
+
+const closePopUpMessages = () => {
+  // Getting all elements with "close" class & all elements with "pop-up-message" class
+  const closeBtns = document.querySelectorAll(".close");
+  const popUps = document.querySelectorAll(".pop-up-message");
+
+  closeBtns.forEach((closeBtn) => {
+    let btnTargetData = closeBtn.dataset.target;
+    closeBtn.addEventListener("click", function () {
+      closePopUp(btnTargetData);
+    });
+  });
+
+  const closePopUp = (btnTargetData) => {
+    console.log(btnTargetData);
+    popUps.forEach((popUp) => {
+      let msgTargetData = popUp.dataset.target;
+      if (btnTargetData === msgTargetData) {
+        console.log("close button", msgTargetData);
+        popUp.classList.add("hidden");
+      }
+    });
+  };
+};
+
+// ====================================================
 
 // Utility functions
 const addLeadingZeros = (num, totalLength) => {
@@ -271,6 +298,7 @@ carousel(); // carousel
 backToTopButton(); // back to top button
 dropdownBookingDates(); // get booking dates
 showPopUp(); //show pop up message
+closePopUpMessages(); //close pop up message
 // Reveal All elements
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);
