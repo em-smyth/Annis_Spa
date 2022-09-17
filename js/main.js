@@ -255,13 +255,18 @@ const showPopUp = () => {
     let btnTargetData = btnPopUp.dataset.target; // get data from html element
     btnPopUp.addEventListener("click", function () {
       showMessages(btnTargetData);
+      if (btnPopUp.classList.contains("confirm-booking")) {
+        getCustomerData();
+      }
     });
   });
 };
 
 // ====================================================
-// Hide Pop up Display
 
+/**
+ * Hide Pop up Display
+ * */
 const closePopUpMessages = () => {
   // Getting all elements with "close" class & all elements with "pop-up-message" class
   const closeBtns = document.querySelectorAll(".close");
@@ -275,15 +280,67 @@ const closePopUpMessages = () => {
   });
 
   const closePopUp = (btnTargetData) => {
-    console.log(btnTargetData);
     popUps.forEach((popUp) => {
       let msgTargetData = popUp.dataset.target;
       if (btnTargetData === msgTargetData) {
-        console.log("close button", msgTargetData);
         popUp.classList.add("hidden");
       }
     });
   };
+};
+
+// ====================================================
+// Book Now Message Content
+const getCustomerData = () => {
+  const firstName = document.getElementById("booking-first-name");
+  const lastName = document.getElementById("booking-last-name");
+  const day = document.getElementById("booking-day");
+  const time = document.getElementById("booking-hours");
+  const email = document.getElementById("booking-email");
+  const treatment = document.getElementById("booking-treatment");
+
+  const firstNameText = firstName.value;
+  const lastNameText = lastName.value;
+  const dayText = day.options[day.selectedIndex].text;
+  const timeText = time.options[time.selectedIndex].text;
+  const emailText = email.value;
+  const treatmentText = treatment.options[treatment.selectedIndex].text;
+  // const treatment = document.querySelector(".treatment");
+  replaceMessageText(
+    firstNameText,
+    lastNameText,
+    dayText,
+    timeText,
+    emailText,
+    treatmentText
+  );
+};
+
+const replaceMessageText = (
+  firstNameText,
+  lastNameText,
+  dayText,
+  timeText,
+  emailText,
+  treatmentText
+) => {
+  const firstName = document.querySelectorAll("#confirmation-first-name");
+  const lastName = document.getElementById("confirmation-last-name");
+  const day = document.getElementById("confirmation-date");
+  const time = document.getElementById("confirmation-time");
+  const email = document.getElementById("confirmation-email");
+  const treatment = document.getElementById("confirmation-treatment");
+
+  // firstName.innerText = "Miles";
+  firstName.forEach((name) => {
+    name.innerText = firstNameText;
+  });
+
+  lastName.innerText = lastNameText;
+  day.innerText = dayText;
+  time.innerText = timeText;
+  email.innerText = emailText;
+  treatment.innerText = treatmentText;
 };
 
 // ====================================================
@@ -303,3 +360,5 @@ closePopUpMessages(); //close pop up message
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);
 window.addEventListener("resize", revealAction);
+
+window.addEventListener("scroll", getCustomerData); // todo: call on scroll temporarily for testing

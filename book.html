@@ -30,16 +30,11 @@
         <div class="burger-flex">
           <ul class="navbar-flex">
             <a href="index.html"><img id="logo" src="./img/Logo-dark-landscape.png" alt="Annispa" /></a>
-            <div class="vertical-line"></div>
-            <div class="navbar-links-flex">
-              <li><a href="index.html">Home<div class="underline"></div></a></li>
-              <li><a href="Treatments.html">Treatments<div class="underline"></div></a></li>
-              <li><a href="About.html">About<div class="underline"></div></a></li>
-
-              <div class="btn-flex-row">
-                <a class="btn btn-dark" href="Book.html">Book Now <div class="overlay-light"></div></a>
-
-              </div>
+            <li><a href="index.html">Home<div class="underline"></div></a></li>
+            <li><a href="treatments.html">Treatments<div class="underline"></div></a></li>
+            <li><a href="about.html">About<div class="underline"></div></a></li>
+            <div class="btn-flex-row">
+              <a class="btn btn-dark" href="Book.html">Book Now <div class="overlay-light"></div></a>
             </div>
           </ul>
           <div class="burger">
@@ -51,6 +46,7 @@
         </div>
       </div>
     </nav>
+
   </header>
   <section class="book-now">
     <h2 class="reveal-top reveal-action">Book Your Treatment Now</h2>
@@ -63,7 +59,7 @@
         <h3>Reservation</h3>
         <form>
           <div class=" form-row">
-        <select name="days">
+        <select id="booking-day" class="booking-day" name="days">
           <option value="day-select">Select Day</option>
           <option class="booking-date" value="day-select">Monday</option>
           <option class="booking-date" value="day-select">Tuesday</option>
@@ -81,31 +77,31 @@
           <option class="booking-date" value="day-select">Sunday</option>
         </select>
 
-        <select name="hours">
-          <option value="hour-select">Select Hour</option>
-          <option value="hour-select">09:00</option>
-          <option value="hour-select">10:00</option>
-          <option value="hour-select">11:00</option>
-          <option value="hour-select">12:00</option>
-          <option value="hour-select">13:00</option>
-          <option value="hour-select">14:00</option>
-          <option value="hour-select">15:00</option>
-          <option value="hour-select">16:00</option>
-          <option value="hour-select">17:00</option>
-          <option value="hour-select">18:00</option>
+        <select id="booking-hours" name="hours">
+          <option class="hour" value="hour-select">Select Hour</option>
+          <option class="hour" value="09:00">09:00</option>
+          <option class="hour" value="10:00">10:00</option>
+          <option class="hour" value="11:00">11:00</option>
+          <option class="hour" value="12:00">12:00</option>
+          <option class="hour" value="13:00">13:00</option>
+          <option class="hour" value="14:00">14:00</option>
+          <option class="hour" value="15:00">15:00</option>
+          <option class="hour" value="16:00">16:00</option>
+          <option class="hour" value="17:00">17:00</option>
+          <option class="hour" value="18:00">18:00</option>
         </select>
       </div>
       <div class="form-row">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
+        <input id="booking-first-name" type="text" placeholder="First Name">
+        <input id="booking-last-name" type="text" placeholder="Last Name">
 
       </div>
       <div class="form-row">
-        <input type="email" placeholder="Email">
+        <input id="booking-email" type="email" placeholder="Email">
 
       </div>
       <div class="form-row">
-        <select name="Select Treatment">
+        <select id="booking-treatment" name="Select Treatment">
           <option value="treatment-select">Select Treatment</option>
           <option value="treatment-select">Full Spa Day </option>
           <option value="treatment-select">Relaxing Massage</option>
@@ -133,7 +129,8 @@
       </div>
       <div class="form-row">
         <div class="btn-flex-row info">
-          <a data-target="#popUp_1" class=" btn btn-dark pop-up">Book Now <div class="overlay-light"></div></a>
+          <a data-target="#popUp_1" class="confirm-booking btn btn-dark pop-up">Book Now <div class="overlay-light">
+            </div></a>
         </div>
       </div>
     </div>
@@ -144,10 +141,17 @@
 
   <section data-target="#popUp_1" class="pop-up-message book hidden">
     <div class="message-container">
-      <h3>Thank you!</h3>
-      <h4>You have successfully requested the following appointment. Please note your appointment is not booked until
+      <h3>Thank you <span id="confirmation-first-name">...</span>!</h3>
+      <h4>You have successfully requested the following appointment: </h4>
+      <h4>Date: <span id="confirmation-date">...</span></h4>
+      <h4>Time: <span id="confirmation-time">...</span></h4>
+      <h4>Treatment: <span id="confirmation-treatment">...</span></h4>
+      <h4>Name: <span id="confirmation-first-name">...</span> <span id="confirmation-last-name">...</span></h4>
+      <h4>Email: <span id="confirmation-email">...</span></h4>
+      <h4>
+        Please note your appointment is not booked until
         you receive an
-        email confirmation, which may take up to 1 working day to be received.</h4>
+        email confirmation which may take up to one working day.</h4>
       <div class="btn-flex-row">
         <a data-target="#popUp_1" class="btn btn-light close">Close<div class="overlay-dark"></div></a>
   </section>
