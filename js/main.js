@@ -232,7 +232,14 @@ const revealAction = () => {
 // ====================================================
 // Show Pop up Display
 
-const showPopUp = () => {
+const showPopUp = (
+  firstNameText,
+  lastNameText,
+  dayText,
+  timeText,
+  emailText,
+  treatmentText
+) => {
   const revealMessages = document.querySelectorAll(".pop-up-message");
 
   function showMessages(btnTargetData) {
@@ -255,6 +262,16 @@ const showPopUp = () => {
     let btnTargetData = btnPopUp.dataset.target; // get data from html element
     btnPopUp.addEventListener("click", function () {
       showMessages(btnTargetData);
+      if (
+        firstNameText === null ||
+        lastNameText === null ||
+        dayText === "Select Day" ||
+        timeText === "Select Hour" ||
+        emailText === null ||
+        treatmentText === "Select Treatment"
+      ) {
+        console.log("Gotcha");
+      }
       if (btnPopUp.classList.contains("confirm-booking")) {
         getCustomerData();
       }
@@ -314,6 +331,14 @@ const getCustomerData = () => {
     emailText,
     treatmentText
   );
+  showPopUp(
+    firstNameText,
+    lastNameText,
+    dayText,
+    timeText,
+    emailText,
+    treatmentText
+  );
 };
 
 const replaceMessageText = (
@@ -360,5 +385,3 @@ closePopUpMessages(); //close pop up message
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);
 window.addEventListener("resize", revealAction);
-
-window.addEventListener("scroll", getCustomerData); // todo: call on scroll temporarily for testing

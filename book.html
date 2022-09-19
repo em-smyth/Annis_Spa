@@ -48,9 +48,9 @@
     </nav>
 
   </header>
-  <section class="book-now">
+  <section class="book-now-flex">
     <h2 class="reveal-top reveal-action">Book Your Treatment Now</h2>
-    <div class="card-container">
+    <div class="card-container-grid">
       <div class="card-img reveal-left reveal-action">
         <!-- image here -->
       </div>
@@ -58,7 +58,7 @@
       <div class="card-content reveal-right reveal-action"">
         <h3>Reservation</h3>
         <form>
-          <div class=" form-row">
+        <div class=" form-row">
         <select id="booking-day" class="booking-day" name="days">
           <option value="day-select">Select Day</option>
           <option class="booking-date" value="day-select">Monday</option>
@@ -94,14 +94,13 @@
       <div class="form-row">
         <input id="booking-first-name" type="text" placeholder="First Name">
         <input id="booking-last-name" type="text" placeholder="Last Name">
-
       </div>
       <div class="form-row">
         <input id="booking-email" type="email" placeholder="Email">
 
       </div>
       <div class="form-row">
-        <select id="booking-treatment" name="Select Treatment">
+        <select id="booking-treatment" class="invalid" name="Select Treatment">
           <option value="treatment-select">Select Treatment</option>
           <option value="treatment-select">Full Spa Day </option>
           <option value="treatment-select">Relaxing Massage</option>
@@ -123,18 +122,17 @@
           <option value="treatment-select">Bikini Waxing</option>
           <option value="treatment-select">Chest & Back Waxing</option>
           <option value="treatment-select">Full Body Waxing</option>
-
         </select>
-
       </div>
+      <p>Please check highlighted fields</p>
       <div class="form-row">
         <div class="btn-flex-row info">
           <a data-target="#popUp_1" class="confirm-booking btn btn-dark pop-up">Book Now <div class="overlay-light">
             </div></a>
         </div>
       </div>
-    </div>
-    </form>
+
+      </form>
     </div>
     </div>
   </section>
@@ -149,9 +147,7 @@
       <h4>Name: <span id="confirmation-first-name">...</span> <span id="confirmation-last-name">...</span></h4>
       <h4>Email: <span id="confirmation-email">...</span></h4>
       <h4>
-        Please note your appointment is not booked until
-        you receive an
-        email confirmation which may take up to one working day.</h4>
+        Your appointment is now booked, please check for a confirmation email.</h4>
       <div class="btn-flex-row">
         <a data-target="#popUp_1" class="btn btn-light close">Close<div class="overlay-dark"></div></a>
   </section>
