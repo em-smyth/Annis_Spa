@@ -204,8 +204,9 @@
     height: 1500px;
   }
 
-  .card-container {
-    grid-template-columns: 100%;
+  /* Booking Page */
+  .card-container-grid {
+    grid-template-columns: 90%;
   }
 
   .card-img {
@@ -497,5 +498,21 @@
 
   #footer .flex-footer {
     width: 270px;
+  }
+
+  /* Book Page */
+
+  .book-now-flex .form-row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  form select,
+  form input {
+    width: 90%;
+    margin: 10px;
   }
 }

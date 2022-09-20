@@ -1,18 +1,15 @@
-// Set dates on booking page on dropdown list
-// day-select
+/**
+ * Set dates on booking page on dropdown list
+ *
+ * */
 const dropdownBookingDates = () => {
   // Get current date from tomorrow
   const nextDay = new Date(); // set nextDay to today
-  nextDay.setDate(nextDay.getDate() + 1); // set nextDay to actual tomorrow bu geting today + 1
+  nextDay.setDate(nextDay.getDate() + 1); // set nextDay to actual tomorrow by geting today + 1
 
   const bookingDays = document.querySelectorAll(".booking-date");
   bookingDays.forEach((day, i) => {
-    // 1. For each to give the correct dates - done
-    // 2. Format correctly
-    // Formatted dates
-
     let weekDay = nextDay.getDay();
-
     let month = nextDay.getMonth();
     let date = nextDay.getDate();
     let year = nextDay.getFullYear();
@@ -24,7 +21,11 @@ const dropdownBookingDates = () => {
   });
 };
 
-// Get formatted week day
+/**
+ * Get formatted week day
+ * @param {string} weekDay
+ * @returns
+ */
 const getFormattedWeekDay = (weekDay) => {
   let formattedWeekDay = "";
   switch (weekDay) {
@@ -56,7 +57,11 @@ const getFormattedWeekDay = (weekDay) => {
   return formattedWeekDay;
 };
 
-// Get formatted month
+/**
+ * Get formatted month
+ * @param {string} month
+ * @returns
+ */
 const getFormattedMonth = (month) => {
   let formattedMonth = "";
   switch (month) {
@@ -102,9 +107,10 @@ const getFormattedMonth = (month) => {
   return formattedMonth;
 };
 
-// =============
-
-/**Burger Menu - This function slides burger menu into the viewport */
+/**
+ * This function slides burger menu into the viewport
+ *
+ */
 const burgerMenuSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".navbar-links-flex");
@@ -129,8 +135,8 @@ const burgerMenuSlide = () => {
 };
 
 /**
- * @name carousel
- * @description This function slides burger menu into the viewport
+ *  Add carousel functionality
+ *
  * */
 const carousel = () => {
   document.querySelectorAll(".carousel").forEach((carousel) => {
@@ -184,7 +190,10 @@ const carousel = () => {
   });
 };
 
-// Back to top button
+/**
+ *  Adds functionality to "back to top" button
+ *
+ * */
 const backToTopButton = () => {
   const backToTopButton = document.querySelector("#back-to-top-btn");
 
@@ -209,7 +218,10 @@ const backToTopButton = () => {
   }
 };
 
-// Reveal elements
+/**
+ *  Reveals elements adding "active" class
+ *
+ * */
 const revealAction = () => {
   const elementsToReveal = document.querySelectorAll(".reveal-action");
   for (let i = 0; i < elementsToReveal.length; i++) {
@@ -229,10 +241,13 @@ const revealAction = () => {
     }
   }
 };
-// ====================================================
-// Show Pop up Display
 
-const showPopUp = (
+/**
+ *  Check if any of the form inputs selects have been filled
+ * @returns
+ *
+ * */
+const formValidation = (
   firstNameText,
   lastNameText,
   dayText,
@@ -240,52 +255,98 @@ const showPopUp = (
   emailText,
   treatmentText
 ) => {
-  const revealMessages = document.querySelectorAll(".pop-up-message");
-
-  function showMessages(btnTargetData) {
-    // console.log("clicked on: ", btnTargetData);
-
-    revealMessages.forEach((message) => {
-      let msgTargetData = message.dataset.target;
-      if (btnTargetData === msgTargetData) {
-        // console.log("show msg with index: ", msgTargetData);
-        message.classList.remove("hidden");
-      } else {
-        // console.log("hide msg with index: ", msgTargetData);
-        message.classList.add("hidden");
-      }
-    });
+  if (
+    firstNameText &&
+    lastNameText &&
+    dayText !== "Select Day" &&
+    timeText !== "Select Hour" &&
+    emailText &&
+    treatmentText !== "Select Treatment"
+  ) {
+    return true;
+  } else {
+    return false;
   }
+};
+/**
+ * Show message based on matching data from a "button" and "pop up", e.g. "#pop_1" === "#pop_1"
+ *
+ */
+const showMessages = (btnTargetData) => {
+  const revealMessages = document.querySelectorAll(".pop-up-message");
+  revealMessages.forEach((message) => {
+    let msgTargetData = message.dataset.target; // get assigned data from html element
+    if (btnTargetData === msgTargetData) {
+      message.classList.remove("hidden");
+    } else {
+      message.classList.add("hidden");
+    }
+  });
+};
 
+/**
+ * Show pop ups and verify matching data button & popUp pairs.
+ * Add event listeners for input fiels on "change" and close buttons on pupUps on "click".
+ *
+ */
+const showPopUp = () => {
   const btnPopUps = document.querySelectorAll(".pop-up");
-  btnPopUps.forEach((btnPopUp, btnIndex) => {
-    let btnTargetData = btnPopUp.dataset.target; // get data from html element
+  btnPopUps.forEach((btnPopUp) => {
+    let btnTargetData = btnPopUp.dataset.target; // Get assigned data from html element
+
     btnPopUp.addEventListener("click", function () {
-      showMessages(btnTargetData);
-      if (
-        firstNameText === null ||
-        lastNameText === null ||
-        dayText === "Select Day" ||
-        timeText === "Select Hour" ||
-        emailText === null ||
-        treatmentText === "Select Treatment"
-      ) {
-        console.log("Gotcha");
-      }
       if (btnPopUp.classList.contains("confirm-booking")) {
-        getCustomerData();
+        const isValidated = getCustomerData();
+
+        // If all data is validated then show pop up message confirming the booking
+        if (isValidated) {
+          showMessages(btnTargetData);
+        }
+      } else if (btnPopUp.classList.contains("subscribe-btn")) {
+        const subscriberEmail = document.querySelector(".subscribe-email");
+
+        // Add listener to subscribe email - call this function & verify on text change
+        subscriberEmail.addEventListener("change", function () {
+          const emailString = subscriberEmail.value;
+          const doubleValidate = verifyEmail(emailString);
+          if (doubleValidate) {
+            subscriberEmail.classList.remove("invalid");
+          } else {
+            subscriberEmail.classList.add("invalid");
+          }
+        });
+
+        // Verify email after clicking the subscribe button & Show subscribe confirmation if email is valid
+        const emailString = subscriberEmail.value;
+        const isEmailValid = verifyEmail(emailString);
+        if (isEmailValid) {
+          showMessages(btnTargetData);
+          subscriberEmail.classList.remove("invalid");
+        } else {
+          subscriberEmail.classList.add("invalid");
+        }
+      } else {
+        showMessages(btnTargetData);
       }
     });
   });
 };
 
-// ====================================================
+/**
+ *  Verify email and return true if it passes regex or false if not
+ *
+ */
+const verifyEmail = (email) => {
+  const re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email.toLowerCase());
+};
 
 /**
- * Hide Pop up Display
- * */
+ * Hide Pop up display for each element with data set
+ *
+ */
 const closePopUpMessages = () => {
-  // Getting all elements with "close" class & all elements with "pop-up-message" class
   const closeBtns = document.querySelectorAll(".close");
   const popUps = document.querySelectorAll(".pop-up-message");
 
@@ -306,8 +367,10 @@ const closePopUpMessages = () => {
   };
 };
 
-// ====================================================
-// Book Now Message Content
+/**
+ * Gets data from the booking form and fills in plaque spans for booking confirmation
+ *
+ */
 const getCustomerData = () => {
   const firstName = document.getElementById("booking-first-name");
   const lastName = document.getElementById("booking-last-name");
@@ -315,6 +378,7 @@ const getCustomerData = () => {
   const time = document.getElementById("booking-hours");
   const email = document.getElementById("booking-email");
   const treatment = document.getElementById("booking-treatment");
+  const bookingFormElements = document.querySelectorAll(".booking-element");
 
   const firstNameText = firstName.value;
   const lastNameText = lastName.value;
@@ -322,7 +386,7 @@ const getCustomerData = () => {
   const timeText = time.options[time.selectedIndex].text;
   const emailText = email.value;
   const treatmentText = treatment.options[treatment.selectedIndex].text;
-  // const treatment = document.querySelector(".treatment");
+
   replaceMessageText(
     firstNameText,
     lastNameText,
@@ -331,7 +395,13 @@ const getCustomerData = () => {
     emailText,
     treatmentText
   );
-  showPopUp(
+  bookingFormElements.forEach((el) => {
+    validateSingleElement(el);
+    el.addEventListener("change", function () {
+      resetInvalidField(bookingFormElements);
+    });
+  });
+  return formValidation(
     firstNameText,
     lastNameText,
     dayText,
@@ -341,6 +411,32 @@ const getCustomerData = () => {
   );
 };
 
+/**
+ * Verifies all input booking customer data and validates each element (adds red border or removes)
+ *
+ */
+const resetInvalidField = (bookingFormElements) => {
+  bookingFormElements.forEach((el) => {
+    validateSingleElement(el);
+  });
+};
+
+/**
+ * Validates single element adding or removing class
+ *
+ */
+const validateSingleElement = (element) => {
+  if (!element.value) {
+    element.classList.add("invalid");
+  } else {
+    element.classList.remove("invalid");
+  }
+};
+
+/**
+ * Replaces confirmation booking message customer data from the form input fiels
+ *
+ */
 const replaceMessageText = (
   firstNameText,
   lastNameText,
@@ -356,7 +452,6 @@ const replaceMessageText = (
   const email = document.getElementById("confirmation-email");
   const treatment = document.getElementById("confirmation-treatment");
 
-  // firstName.innerText = "Miles";
   firstName.forEach((name) => {
     name.innerText = firstNameText;
   });
@@ -368,13 +463,7 @@ const replaceMessageText = (
   treatment.innerText = treatmentText;
 };
 
-// ====================================================
-
-// Utility functions
-const addLeadingZeros = (num, totalLength) => {
-  return String(num).padStart(totalLength, "0");
-};
-
+// Call all the functions
 burgerMenuSlide(); // burger menu
 carousel(); // carousel
 backToTopButton(); // back to top button
@@ -385,3 +474,12 @@ closePopUpMessages(); //close pop up message
 window.addEventListener("scroll", revealAction);
 window.addEventListener("load", revealAction);
 window.addEventListener("resize", revealAction);
+
+// Utility function
+/**
+ * Add leading zeros and return string with specified amount of zeros
+ *
+ */
+const addLeadingZeros = (num, totalLength) => {
+  return String(num).padStart(totalLength, "0");
+};

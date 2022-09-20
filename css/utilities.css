@@ -51,6 +51,7 @@ ul {
   height: 44px;
   text-align: center;
   border-radius: 1px;
+  cursor: pointer;
 }
 
 .btn-flex-row {
@@ -264,4 +265,8 @@ h3 {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.invalid {
+  border: red solid 2px !important;
 }

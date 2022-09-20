@@ -440,3 +440,11 @@
 .pop-up-message .message-container h4 {
   font-weight: 200;
 }
+
+.pop-up-message .message-container .bold {
+  font-weight: 400;
+}
+
+.pop-up-message .message-container .customer-data {
+  text-decoration: underline;
+}
