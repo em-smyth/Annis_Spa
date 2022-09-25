@@ -119,6 +119,14 @@ const burgerMenuSlide = () => {
   // Toggle Nav
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
+
+    // Toggle on and off transition timer everytime on click
+    // To prevent burger menu pop up on landscape view
+    nav.classList.add("nav-active-transition");
+    setTimeout(() => {
+      nav.classList.remove("nav-active-transition");
+    }, 600);
+
     // Animate Links
     navLinks.forEach((link, index) => {
       const linkTiming = index / 7 + 0.2;
