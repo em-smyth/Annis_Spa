@@ -27,8 +27,8 @@
   #navbar .navbar-links-flex {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 9.5vh;
+    height: 96vh;
+    top: 7.9vh;
     background-color: var(--light-biege);
     display: flex;
     flex-direction: column;
